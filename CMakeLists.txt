@@ -41,4 +41,5 @@ message(STATUS "fmt succesfully installed in " ${fmt_SOURCE_DIR})
 
 link_libraries(fmt)
 
+add_subdirectory(libraries)
 add_subdirectory(src)
