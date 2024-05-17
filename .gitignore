@@ -1,0 +1,4 @@
+.cache/clangd/index
+build
+.vs
+CMakeSettings.json
