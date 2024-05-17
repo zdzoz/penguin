@@ -1,11 +1,15 @@
-#include <fmt/core.h>
-#include <GLFW/glfw3.h>
+#include "window/window.h"
 
-int main() {
-    glfwInit();
+int main()
+{
+    pn::Window::Props props = {};
+    auto win = pn::Window::create(std::move(props));
 
-    fmt::println("hello world!");
+    if (win) {
+        while ((*win)->open()) {
+            (*win)->poll();
+        }
+    }
 
-    glfwTerminate();
     return 0;
 }

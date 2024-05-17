@@ -1,5 +1,10 @@
+#pragma once
+
 #include <cinttypes>
+#include <fmt/core.h>
 #include <memory>
+#include <optional>
+#include <string>
 
 typedef uint8_t u8;
 typedef uint16_t u16;
@@ -20,12 +25,12 @@ enum class OS {
 
 #if defined(__APPLE__)
 // NOTE: maybe need more checks for apple platforms
-    #define CURRENT_OS OS::Osx
+#define CURRENT_OS OS::Osx
 #elif defined(FIXME_WINDOWS)
-    // FIX: add windows check
-    #define CURRENT_OS OS::UNKNOWN
+// FIX: add windows check
+#define CURRENT_OS OS::UNKNOWN
 #else
-    #define CURRENT_OS OS::UNKNOWN
+#define CURRENT_OS OS::UNKNOWN
 #endif
 
 constexpr OS currentOS = CURRENT_OS;
