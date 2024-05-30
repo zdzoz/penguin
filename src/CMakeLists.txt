@@ -1,5 +1,6 @@
 add_executable(${PROJECT_NAME}
     main.cpp
+    app.h app.cpp
 )
 
 add_subdirectory(window)
